@@ -1,20 +1,60 @@
-# [Diy-Camera-Slider](https://circuitdigest.com/microcontroller-projects)
+<img src="https://www.diyphotography.net/wp-content/uploads/2017/03/completed_slider.jpg"  alt="alt_text" title="image_tooltip">
+<br>
+Автоматический слайдер для камеры
 
-<img src="https://github.com/Circuit-Digest/Diy-Camera-Slider/blob/e7d04af183daa3328284dd7591ad4e17b3fe8588/Camera%20Slider.png" width="" alt="alt_text" title="image_tooltip">
-<br>
+Описание проекта
+Этот проект представляет собой автоматический слайдер для камеры с возможностью управления через энкодер и дисплей. Система позволяет задавать начальную и конечную точки движения камеры, регулировать скорость и автоматически выполнять плавное перемещение между точками.
 
-<br>
-<a href="https://circuitdigest.com/tags/Arduino"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=Arduino Tutorials Circuit Digest&color=%230076D6&style=social&logo=google-chrome&logoColor=%230076D6" alt="circuitdigest"/></a>
-<br>
+Основные функции
+- Управление положением камеры по двум осям (слайд и панорама)
+- Задание начальной и конечной  точек движения
+- Регулировка скорости перемещения
+- Предпросмотр траектории
+- Автоматическое выполнение движения
+- Возврат в исходное положение 
 
-[<h1>Click here](https://circuitdigest.com/tags/Arduino) For other Arduino tutorials.</h1>
+Компоненты
+- Микроконтроллер Arduino 
+- 2 шаговых двигателя с драйверами
+- дисплей 128x64 
+- Ротационный энкодер с кнопкой
+- Концевой выключатель
+- Механические компоненты слайдера
+
+Установка и настройка
+1. Установите необходимые библиотеки:
+   - Adafruit_GFX
+   - Adafruit_SSD1306
+   - AccelStepper
+
+2. Подключите компоненты согласно схеме:
+   - Шаговые двигатели к пинам 5-8
+   - OLED-дисплей к I2C (адрес 0x3C)
+   - Энкодер к пинам 2 (CLK), 3 (SW), 4 (DT)
+   - Концевой выключатель к пину 10
+
+3. Загрузите скетч `CAMSLIDER0.ino` в микроконтроллер
+
+Использование
+1. После включения система выполнит процедуру Homing
+2. Следуйте инструкциям на экране:
+   - Установите начальную точку (SLIDE IN и PAN IN)
+   - Установите конечную точку (SLIDE OUT и PAN OUT)
+   - Задайте скорость движения
+   - Запустите выполнение движения
+
+Управление
+- Поворот энкодера: изменение положения/скорости
+- Нажатие кнопки энкодера: переход к следующему шагу
+
+Особенности
+- Плавное ускорение и замедление двигателей
+- Расчет времени выполнения движения
+- Графический интерфейс с анимациями
+- Защита от перегрузки двигателей
 
 
-<br>
-<br>
-Are you tired of having shaky footage ruin your video? Or do you want to make some cinematic, professional-looking shots? Let’s make a cheap and easy-to-make camera slider to solve these problems. In this project, we are going to make a motorized camera slider using Arduino. The entire system is made using off-the-shelf parts such as stepper motors, motor drivers and Arduinos and it is designed to be very versatile.
 
-<br>
-[Note: As this projects are very simple we are only providing the code, schemaitic, and a few essential images if you want to get the images or code explanations do check out the Circuit Digest website.
-<br>
-<br>
+
+
+
